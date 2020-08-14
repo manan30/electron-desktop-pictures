@@ -1,7 +1,9 @@
 {
   "root": true,
   "env": {
-    "es2020": true
+    "es2020": true,
+    "browser": true,
+    "es6": true
   },
   "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "parserOptions": {
@@ -13,6 +15,7 @@
   },
   "plugins": ["react", "react-hooks", "prettier"],
   "rules": {
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-filename-extension": "off"
   }
 }
