@@ -13,12 +13,14 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  // win.loadFile('dist/index.html');
   win.loadURL(
     isDev
       ? 'http://localhost:1234'
       : `file://${path.join(__dirname, '../build/index.html')}`
   );
+
+  // eslint-disable-next-line global-require
+  if (isDev) require('react-devtools-electron');
 }
 
 app.whenReady().then(createWindow);
